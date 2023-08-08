@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Device Tracker">
+  <meta name="keywords" content="Device Tracker, Tracker, Device">
+  <link rel="icon" type="image/jpg" href="images/icon_img.jpg">
+  <title>Registration Page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!---<link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>-->
+
+
+  <!---Animation-->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand font-weight-bolder" href="#">Document Management</a>
+    
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="true" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse myNavBar" id="navbarTogglerDemo03">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/about-us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/file-upload">Add a file</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/file-download">Download Files</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/register">Register <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="/search-document">Search Your Documents</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+      <br>
+      <hr>
+      <hr>
+
+      <div class="container-fluid my_signup">
+        <div class="row d-flex justify-content-center align-items-center bg_signup">
+          <div class="col-md-3 col-sm-3 col-xl-4 col-xs-12"></div>
+          <div class="col-md-6 col-sm-6  col-xl-4 col-xs-12 bg-signup-box">
+            <h1>Signup Here</h1>
+              <form action="" method="post">
+                {% csrf_token %} 
+                <hr>
+                <br>
+                <label for="username">Username</label>
+                <input type="text" placeholder="Username" name="username" id="username">
+                <hr>
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email or Phone" name="email" id="email">
+                <hr>
+                <label for="password1">Password</label>
+                <input type="password" placeholder="Password" id="password1" name="password1">
+                <hr>
+        
+                <label for="password2">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" id="password2" name="password2">
+                <button type="submit">Register</button>
+                <hr>
+                <a href="{% url 'login' %}" >Already have an account?</a>
+              </form>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xl-4 col-xs-12"></div>
+        </div>
+      </div>
+    
+        <!-- <script src="" async defer></script> -->
+        
+        
+        
+        <!--<script src="test.js"></script> -->
+
+
+          <!-- jQuery and JS bundle w/ Popper.js -->
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        
+         <script>
+             $(window).scroll(function(){
+             $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
+             });
+         </script>
+        
+         <script>
+              window.sr = ScrollReveal();
+              sr.reveal('.info-left', {
+                 duration: 2000,
+                 origin: 'left',
+                 distance: '300px',
+                 viewFactor: 0.2
+              });
+              sr.reveal('.info-right', {
+                 duration: 2000,
+                 origin: 'right',
+                 distance: '300px',
+                 viewFactor: 0.2
+              });
+         </script>
+        
+        
+          <script>
+              $(function () {
+              // Smooth Scrolling
+              $('a[href*="#"]:not([href="#"])').click(function () {
+                  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                      var target = $(this.hash);
+                      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                      if (target.length) {
+                          $('html, body').animate({
+                              scrollTop: target.offset().top
+                          }, 1000);
+                          return false;
+                      }
+                  }
+              });
+          });
+          </script>
+    </body>
+</html>
